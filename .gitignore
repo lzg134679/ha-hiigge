@@ -1,0 +1,50 @@
+# 厂商安装包，不随仓库分发（版权归厂商所有）
+*.apk
+*.apks
+*.xapk
+
+# 逆向分析笔记：含协议细节、设备标识与签名密钥，不公开
+逆向分析报告.md
+
+# Python
+__pycache__/
+custom_components/hiigge/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+*.pyc
+
+# 抓包样本（含 token / deviceId 等个人数据）
+*-request
+*-response
+sample*.json
+capture*.json
+
+# 手机端逆向调试工具：体积大、含第三方版权，且只在本地排查时使用。
+# 集成本体不依赖这些文件（签名与接口已完全还原）。
+tools/frida-server
+tools/frida-server-*
+tools/*.js
+tools/grab_sms_run.py
+tools/ssl_*.py
+
+# 本地测试等临时输出
+tools/
+
+# 日志与临时文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp

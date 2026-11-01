@@ -1,0 +1,120 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "选择登录方式",
+        "menu_options": {
+          "password": "手机号 + 密码",
+          "sms": "手机号 + 短信验证码",
+          "token": "自行抓包填 token"
+        },
+        "description": "本账号**只能在一处保持登录**：集成登录会把手机 App 挤下线，反过来亦然。\n\n建议注册一个小号、加入大号的家庭，集成用小号登录，这样手机 App 与集成互不影响。"
+      },
+      "password": {
+        "title": "Hiigge 账号登录",
+        "description": "输入 App 登录用的手机号和密码。{hint}",
+        "data": {
+          "account": "手机号",
+          "password": "密码",
+          "base_url": "服务器（默认国内服）"
+        },
+        "data_description": {
+          "base_url": "服务器地址由 App 逆向获取，目前仅实测国内服，海外服同协议可达但未逐项验证。"
+        }
+      },
+      "sms": {
+        "title": "短信验证码登录",
+        "description": "{hint}",
+        "data": {
+          "account": "手机号",
+          "base_url": "服务器（默认国内服）"
+        },
+        "data_description": {
+          "base_url": "服务器地址由 App 逆向获取，目前仅实测国内服，海外服同协议可达但未逐项验证。"
+        }
+      },
+      "sms_code": {
+        "title": "输入短信验证码",
+        "description": "{hint}",
+        "data": {
+          "sms_code": "验证码",
+          "resend": "重新发送验证码"
+        },
+        "data_description": {
+          "resend": "勾选后提交会重新下发一条短信，不会消耗已填的验证码。"
+        }
+      },
+      "pick_device": {
+        "title": "选择设备",
+        "data": {
+          "device_id": "设备"
+        }
+      },
+      "token": {
+        "title": "手动填写 token",
+        "description": "{hint}",
+        "data": {
+          "token": "token",
+          "device_uuid": "uuid",
+          "base_url": "服务器（默认国内服）"
+        },
+        "data_description": {
+          "base_url": "服务器地址由 App 逆向获取，目前仅实测国内服，海外服同协议可达但未逐项验证。"
+        }
+      },
+      "reauth": {
+        "title": "token 已失效，请重新登录",
+        "description": "账号 {account} 需要重新认证，可任选一种方式。",
+        "menu_options": {
+          "reauth_confirm": "手机号 + 密码",
+          "reauth_sms": "手机号 + 短信验证码",
+          "reauth_saved": "用已保存的密码重新登录（无需输入）"
+        }
+      },
+      "reauth_confirm": {
+        "title": "重新登录（密码）",
+        "data": {
+          "account": "账号",
+          "password": "密码"
+        }
+      },
+      "reauth_sms": {
+        "title": "重新登录（验证码）",
+        "description": "{hint}",
+        "data": {
+          "account": "手机号",
+          "sms_code": "验证码（留空则先发送）"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "账号或密码不正确",
+      "invalid_code": "验证码不正确或已过期，请重新获取",
+      "code_locked": "该验证码连续校验失败次数过多，请勾选「重新发送验证码」后重试",
+      "code_rate_limited": "验证码发送/校验过于频繁，请稍后再试（约 1 分钟后重试）",
+      "cannot_connect": "连接云端失败（网络或证书问题）",
+      "no_devices": "该账号下没有找到设备，请确认 App 里已添加饮水机",
+      "bad_token": "token/uuid 不能为空",
+      "api_rejected": "服务端拒绝了请求（账号或参数有误），具体原因见日志。"
+    },
+    "abort": {
+      "already_configured": "该设备已配置",
+      "reauth_successful": "重新登录成功",
+      "unsupported_device": "无法识别该设备的品类（硬件型号 type={model}）。该型号尚未在本集成中登记，请提交 issue 补充型号对应的 smartType 与解码器。",
+      "reauth_failed": "无法定位需要重新认证的配置条目（流程上下文已丢失），请移除该集成后重新添加。",
+      "reauth_no_saved_credential": "这条配置没有保存密码凭据，请改用「手机号 + 密码」或「短信验证码」重新登录。",
+      "reauth_saved_invalid": "已保存的密码凭据已失效（可能修改过密码），请改用「手机号 + 密码」重新登录。",
+      "reauth_saved_unreachable": "用已保存凭据登录时无法连接云端，请稍后重试或改用密码登录。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "轮询间隔（秒）",
+          "enable_control": "启用控制实体（开关 / 选择 / 数字 / 按钮）"
+        }
+      }
+    }
+  }
+}
