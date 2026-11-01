@@ -82,9 +82,11 @@ hourly:
 2. 重启 Home Assistant
 3. 设置 → 设备与服务 → 添加集成 → 搜索「Hiigge 宠物饮水机」
 
-**HACS**（如果本项目已发布到 HACS）
+**HACS**（自定义仓库）
 
-添加自定义仓库 → 搜索 Hiigge → 下载 → 重启 → 添加集成。
+1. HACS → 右上角菜单 → 自定义仓库 → 添加 `lzg134679/ha-hiigge`，类别选「集成」
+2. 搜索「Hiigge 宠物饮水机」→ 下载 → 重启 Home Assistant
+3. 设置 → 设备与服务 → 添加集成 → 搜索「Hiigge」
 
 ## 配置
 

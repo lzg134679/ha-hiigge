@@ -1,12 +1,14 @@
 {
   "domain": "hiigge",
   "name": "Hiigge 宠物智能设备",
-  "codeowners": [],
+  "codeowners": [
+    "@lzg134679"
+  ],
   "config_flow": true,
-  "documentation": "https://github.com/OWNER/ha-hiigge",
+  "documentation": "https://github.com/lzg134679/ha-hiigge",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/OWNER/ha-hiigge/issues",
+  "issue_tracker": "https://github.com/lzg134679/ha-hiigge/issues",
   "loggers": [
     "custom_components.hiigge"
   ],
